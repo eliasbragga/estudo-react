@@ -1,37 +1,24 @@
 import "./App.css";
 import Header from "./components/header/Header";
-import SayMyName from "./components/SayMyName";
-import Pessoa from "./components/Pessoa";
-import Lista from "./components/Lista";
-import Evento from "./components/Evento";
-
-import React, { useState } from "react";
+import Form from "./components/form_search/Form";
 
 function App() {
-  function clicar(){
-    alert('Ola Mundo')
-  }
 
-
-  const nome = "react";
-  const cursoA = "Vuejs";
-  const [num, setNum] = useState("Elias");
-
-  return (
+  return(
     <div className="App">
-      <Header nome={nome} />
-      <Evento clicar={clicar} nomeButton='Primeiro Emit' />
-      <Lista nome={num} curso={cursoA} />
-      <button onClick={() => setNum("Voce clicou")}>Alterar num</button>
-      <SayMyName nome={nome} />
-      <Pessoa
-        nome="rodrigo"
-        idade="28"
-        profissao="programador"
-        foto="https://via.placeholder.com/300"
-      />
+      <Header/>
+      <Form/>
+
+
+      {/* <input type="text" value={search} onChange={ (e)=> setSearch(e.target.value) } />
+      <button onClick={searchProfile}>Search Profile in GitHub</button>
+        <span >Nome: {user.name}</span>
+      <div >
+        <img className="avatar" src={user.avatar_url} alt="" />
+      </div> */}
     </div>
-  );
-}
+
+  )
+  }
 
 export default App;

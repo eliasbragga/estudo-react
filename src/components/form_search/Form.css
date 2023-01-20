@@ -1,0 +1,38 @@
+.form {
+    display: flex;
+    height: 100% !important;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.search_form {
+    display: flex;
+    justify-self: center;
+    justify-content: end;
+    padding: 2rem;
+}
+
+.button button {
+    padding: .7rem;
+    border-radius: 4px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    color: black;
+    margin-right: 1rem;
+    transition: .2s;
+}
+
+.button button:hover {
+    background-color: rgb(208, 208, 208);
+    transition: .2s;
+}
+
+.input input {
+    padding: 0.7rem;
+    border-radius: 4px;
+    border: none;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

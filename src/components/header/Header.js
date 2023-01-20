@@ -1,16 +1,18 @@
-import Frase from '../main/Frase'
+import '../header/Header.css'
 
-
-function Header() {
+function Header({teste}) {
 
 
 
     return (
-        <div>
-            <h1>Aqui é o header</h1>
-            <Frase/>
-            
-        </div>
+        <>
+            <header className='header'>
+                <nav>
+                    <img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" alt="" />
+                    <span>GitHub</span>
+                </nav>
+            </header>
+        </>
     )
 
 
