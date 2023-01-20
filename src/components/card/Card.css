@@ -12,6 +12,10 @@
     
 }
 
+.colorYellow {
+    color: #e1b12c;
+}
+
 .image  {
     width: 40%;
     height: 40%;
@@ -27,4 +31,17 @@
 .description {
     text-align: center;
     margin: auto;
+}
+
+.link {
+    margin-bottom: 1rem;
+}
+
+.link a {
+    text-decoration: none;
+    color: aliceblue;
+    background: green;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
 }

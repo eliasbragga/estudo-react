@@ -10,6 +10,7 @@ function Form({ name, url, description }) {
       const req = await fetch(`https://api.github.com/users/${search}`);
       let json = await req.json();
       setUser(json);
+      console.log(json)
       if (json.message) console.log(json.message);
       setSearch("");
       console.log("user", user);
@@ -27,6 +28,7 @@ function Form({ name, url, description }) {
           </div>
           <div className="input">
             <input
+            placeholder="profile name"
               autoFocus
               value={search}
               onChange={(e) => setSearch(e.target.value)}
@@ -41,6 +43,7 @@ function Form({ name, url, description }) {
             name={user.name}
             html_url={user.html_url}
             last_update={user.updated_at}
+            public_repos={user.public_repos}
           />
         </div>
       </div>

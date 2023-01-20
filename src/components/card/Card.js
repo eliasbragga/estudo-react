@@ -1,8 +1,14 @@
 import '../card/Card.css'
 import image_profile from '../../static/imgae_perfil.png'
-function Card({name, url, description, html_url, last_update}) {
+import { useEffect } from 'react'
+import { useState } from 'react'
+function Card({name, url, public_repos, html_url, last_update}) {
 
-    let image = '../'
+    const [dateFormatted, setDateFormatted] = useState('')
+
+    useEffect(() =>{
+       if(last_update) setDateFormatted(last_update.slice(0,10).split('-').reverse().join('/'))
+    }, [last_update] )
 
     return (
         <>
@@ -14,21 +20,21 @@ function Card({name, url, description, html_url, last_update}) {
                     <div className='description'>
                         {
                             name &&
-                            <h1>{name}</h1>
+                            <h1  className='colorYellow'>{name}</h1>
                         }
-                        <div>
+                        <div className='link'>
                         {html_url && 
-                                 <a href={html_url } target="_blank">Visitar</a>
+                                 <a href={html_url } target="_blank">To Visit</a>
                             }
                         </div>
                         <div>
                             <a href=""></a>
                             {last_update && 
-                                 <span >Last Update at: {last_update.slice(0,10).split('-').reverse().join('/')}</span>
+                                 <span >Last Update at: <span className='colorYellow'>{dateFormatted}</span></span>
                             }
                        
                         </div>
-                        <p>{description}</p>
+                        <p>Repos: <span className='colorYellow'>{public_repos}</span></p>
                     </div>
                 </div>
            </div>

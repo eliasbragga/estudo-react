@@ -17,16 +17,17 @@
     padding: .7rem;
     border-radius: 4px;
     border: none;
-    background-color: white;
+    background-color: #e1b12c;
+    color: #353b48;
+    font-weight: bold;
     cursor: pointer;
-    color: black;
     margin-right: 1rem;
     transition: .2s;
 }
 
 .button button:hover {
-    background-color: rgb(208, 208, 208);
-    transition: .2s;
+    background-color: #b88908;
+    transition:.2s;
 }
 
 .input input {
