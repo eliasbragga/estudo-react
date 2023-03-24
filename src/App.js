@@ -1,13 +1,15 @@
 import "./App.css";
-import Header from "./components/header/Header";
-import Form from "./components/form_search/Form";
+// import Header from "./components/header/Header";
+// import Form from "./components/form_search/Form";
+import { Lista } from "./components/lista/Lista.js";
 
 function App() {
 
   return(
     <div className="App">
-      <Header/>
-      <Form/>
+      {/* <Header/>
+      <Form/> */}
+      <Lista/>
 
 
       {/* <input type="text" value={search} onChange={ (e)=> setSearch(e.target.value) } />
